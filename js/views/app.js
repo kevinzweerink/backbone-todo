@@ -46,9 +46,7 @@ var app = app || {};
 					.filter('[href="#/' + (app.TodoFilter || '') + '"]' )
 					.addClass('selected');
 
-				this.$(".view").removeClass("last-view").last().addClass("last-view");
 			} else {
-				this.$main.hide();
 				this.$footer.hide();
 			}
 			

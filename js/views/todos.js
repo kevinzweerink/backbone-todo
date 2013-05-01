@@ -26,7 +26,10 @@ var app = app || {};
 			return this;
 		},
 		toggleVisible: function () {
+			$('#todo-list').children().removeClass('last-item');
 			this.$el.toggleClass( 'hidden', this.isHidden() );
+			window.setTimeout(function() {$('.hidden').css('overflow','hidden')}, 200);
+			window.setTimeout(function() {$('#todo-list').children().not('.hidden').css('overflow','visible')}, 200);
 		},
 		isHidden: function () {
 			var isCompleted = this.model.get('completed');

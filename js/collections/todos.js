@@ -19,10 +19,10 @@ var app = app || {};
 				return 1;
 			}
 			
-			return this.last().get('order') + 1;
+			return -(this.last().get('order') + 1);
 		},
 		comparator: function (todo) {
-			return todo.get( 'order' );
+			return -(todo.get( 'order' ));
 		}
 			
 	});
